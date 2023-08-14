@@ -1,0 +1,25 @@
+.button {
+  border: none;
+  display: block;
+  width: 100%;
+  padding: var(--button-padding);
+  background-color: var(--button-background-color);
+  color: var(--button-font-color);
+  font-size: var(--button-font-size);
+  line-height: 1;
+  border-radius: var(--button-border-radius);
+  user-select: none;
+  box-shadow: var(--button-box-shadow);
+  transition: all .3s ease;
+  cursor: pointer;
+  margin-bottom: 2px;
+}
+
+.button:hover {
+  box-shadow: var(--botton-hover-box-shadow);
+}
+
+.button:focus,.button:active {
+  opacity: .95;
+  box-shadow: none;
+}
