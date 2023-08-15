@@ -1,8 +1,0 @@
-.row {
-  padding: var(--row-padding);
-  display: flex;
-  gap: var(--row-gap);
-}
-.row:last-child {
-  padding-bottom: 0;
-}
