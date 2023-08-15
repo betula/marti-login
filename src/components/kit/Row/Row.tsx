@@ -2,7 +2,7 @@ import cn from 'classnames';
 import styles from './Row.module.css';
 
 interface Props {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   className?: string;
 }
 

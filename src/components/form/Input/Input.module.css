@@ -1,0 +1,33 @@
+
+.inputContainer {
+  display: flex;
+  padding: var(--form-padding);
+  line-height: var(--form-height);
+  height: var(--form-height);
+  align-items: center;
+  gap: var(--padding-between);
+  color: var(--font-body-color);
+}
+.input {
+  display: flex;
+  flex-grow: 1;
+  background-color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  border: 0;
+  padding: 0;
+  width: 100%;
+}
+.input::placeholder {
+  color: var(--font-gray-color);
+  opacity: 1;
+}
+.input:focus {
+  outline: 0;
+}
+
+.postfixContainer {
+  display: flex;
+}

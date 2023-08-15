@@ -1,21 +1,26 @@
 import { Navigate, RouterProvider, createBrowserRouter } from 'react-router-dom';
-import { Layout } from '../components/kit/Layout/Layout';
 import { SignIn } from '../components/auth/SignIn/SignIn';
 import { SignUp } from '../components/auth/SignUp/SignUp';
 import { Forgot } from '../components/auth/Forgot/Forgot';
+import { Welcome } from '../components/Welcome/Welcome';
+import { Page } from '../components/Page/Page';
 
 const router = createBrowserRouter([
   {
     path: '/sign-in',
-    element: <Layout><SignIn /></Layout>,
+    element: <Page><SignIn /></Page>
   },
   {
     path: '/sign-up',
-    element: <Layout><SignUp /></Layout>,
+    element: <Page><SignUp /></Page>,
   },
   {
     path: '/forgot',
-    element: <Layout><Forgot /></Layout>,
+    element: <Page><Forgot /></Page>,
+  },
+  {
+    path: '/welcome',
+    element: <Page loggedIn><Welcome /></Page>,
   },
   {
     path: '*',

@@ -1,6 +1,6 @@
 .delim {
   box-sizing: border-box;
-  border-top: 1px solid var(--gray-line-color);
+  border-top: 1px solid var(--line-gray-color);
   padding-bottom: var(--padding-space);
   margin-top: calc(var(--padding-space) - var(--padding-between));
 }

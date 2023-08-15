@@ -19,7 +19,23 @@
   box-shadow: var(--botton-hover-box-shadow);
 }
 
-.button:focus,.button:active {
+.button:focus,
+.button:active,
+.button.disabled {
   opacity: .95;
   box-shadow: none;
+}
+.button.disabled {
+  opacity: .6;
+}
+
+@keyframes animate-stripes {
+  0% { background-position-x: 0px; }
+  100% { background-position-x: 48px; }
+}
+
+.button.progress {
+  background-image: linear-gradient(135deg,rgba(255,255,255,.05) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.05) 50%,rgba(255,255,255,.05) 75%,transparent 75%,transparent);
+  background-size: 48px 48px;
+  animation: 1s linear infinite animate-stripes;
 }

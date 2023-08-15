@@ -19,8 +19,13 @@ body {
 
   --font-h1-color: rgb(28, 28, 28);
   --font-body-color: rgb(87, 87, 87);
-  --gray-line-color: rgb(233, 233, 233);
+  --font-gray-color: rgb(150, 150, 150);
+
+  --line-gray-color: rgb(233, 233, 233);
   --active-color: rgb(58, 131, 247);
+
+  --font-body-size: 16px;
+  --font-small-size: 14px;
 
   --layout-background-color: rgb(248, 250, 255);
 
@@ -44,6 +49,15 @@ body {
   --button-font-size: 22px;
   --button-font-color: white;
   --button-padding: 16px;
+
+  --form-required-color: rgb(214, 64, 56);
+  --form-border-radius: var(--button-border-radius);
+  --form-box-shadow: 0 0 0 1px var(--line-gray-color);
+  --form-error-color: var(--form-required-color);
+  --form-focused-shadow: 0 0 2px 1px rgba(58, 131, 247, .4),
+    0 0 0 1px var(--active-color) inset;
+  --form-height: 24px;
+  --form-padding: 8px 11px;
 }
 
 h1 {
@@ -54,7 +68,7 @@ h1 {
   color: var(--font-h1-color);
 }
 .body {
-  font-size: 16px;
+  font-size: var(--font-body-size);
   line-height: 1.6;
   color: var(--font-body-color);
 }
@@ -63,8 +77,31 @@ h1 {
   align-items: center;
   justify-content: center;
 }
+.right {
+  text-align: right;
+  align-items: end;
+  justify-content: end;
+}
 a {
   text-decoration: none;
   color: var(--active-color);
   font-weight: 500;
+}
+a:focus {
+  outline: 0;
+  box-shadow: var(--form-focused-shadow);
+  padding: calc(var(--padding-between) / 2);
+  margin: calc(0px - var(--padding-between) / 2);
+  border-radius: var(--form-border-radius);
+}
+.muted,
+a.muted {
+  color: var(--font-gray-color);
+  font-weight: 400;
+}
+.wordBreak {
+  word-break: break-word;
+}
+.error {
+  color: var(--form-error-color);
 }
